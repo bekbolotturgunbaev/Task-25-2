@@ -17,14 +17,16 @@ public class Main {
         arrayList.add(new City(9,"Mariya"));
         arrayList.add(new City(10,"Janadil"));
 
+
+        TreeSet<City> set = new TreeSet<>(Collections.reverseOrder());
         for (int i = 0; i < arrayList.size(); i++) {
             if (i % 2 == 1) {
-                System.out.println(arrayList.get(i));
+                set.add(arrayList.get(i));
             }
         }
-        TreeSet<City> set = new TreeSet<>(Collections.reverseOrder());
-        set.addAll(arrayList);
+
         System.out.println(set);
+
 
 
     }
